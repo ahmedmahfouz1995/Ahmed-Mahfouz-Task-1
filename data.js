@@ -8,7 +8,6 @@ const addStudenData =(id, name, degrees, comment)=>{
         console.log("plz enter valid Data");
     }
     else{
-        saveData(studentData)
         if (name === "") {
             console.log("please enter student name")
         } else {
@@ -38,16 +37,15 @@ const addStudenData =(id, name, degrees, comment)=>{
                         total: totalDeg,
                         comment
                     })
-                    saveData(studentData)
+                    saveData(studentData) 
                 }
                 else {
                     console.log('The id is already exist can not add student with duplicate id')
                 }
             }
-            
-
         }
-    }         
+    }     
+       
 } 
 const loadData=() =>{
     try {

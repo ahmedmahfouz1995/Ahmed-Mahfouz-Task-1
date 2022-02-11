@@ -31,8 +31,9 @@
         }
         ,
         handler: (x)=>{
-            studentData.addStudenData(x.id,x.name,x.degress,x.comment)
-            console.log(`student ${x.name} + added`)
+            console.log(x)
+            studentData.addStudenData(x.studentID,x.studentName,x.studentDegress,x.comment)
+            console.log(`student ${x.studentName}  added`)
         }
     })
 
