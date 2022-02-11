@@ -4,7 +4,7 @@ const fs = require("fs")
 // add student data functions================================>
 const addStudenData =(id, name, degrees, comment)=>{
     const studentData = loadData()
-    if(isNaN(id) || id == 0 ){
+    if(isNaN(id) ){
         console.log("plz enter valid Data");
     }
     else{
@@ -29,7 +29,7 @@ const addStudenData =(id, name, degrees, comment)=>{
                              console.log("please inter valid degrees")
                          }
                         
-                    });
+                    })
                     studentData.push({
                         id,
                         name,
@@ -49,8 +49,8 @@ const addStudenData =(id, name, degrees, comment)=>{
 } 
 const loadData=() =>{
     try {
-        data= fs.readFileSync("studentData.json").toString
-        return JSON.parse(data)
+       const saveData = fs.readFileSync("studentData.json").toString()
+        return JSON.parse(saveData)
     } catch (error) {
         return []
     }
@@ -72,8 +72,9 @@ const removeStudenData =(id)=>{
         })
        
             if(studentData.length !== studentToKeep.length){
-                saveStudent(studentToKeep)
+                saveData(studentToKeep)
                 console.log(`student with id: ${id} removed successfuly`)
+
             }
             else{
                 console.log(`No student with id: ${id} to delete`)

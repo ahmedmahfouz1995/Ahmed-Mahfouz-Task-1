@@ -31,7 +31,6 @@
         }
         ,
         handler: (x)=>{
-            console.log(x)
             studentData.addStudenData(x.studentID,x.studentName,x.studentDegress,x.comment)
             console.log(`student ${x.studentName}  added`)
         }
@@ -51,8 +50,8 @@
         }
         ,
         handler: (x)=>{
-            studentData.removeStudenData(x.id)
-            console.log(`student ${x.name} + Removed`)
+            studentData.removeStudenData(x.studentID)
+            
         }
     })
 
@@ -70,7 +69,7 @@
     }
         ,
         handler: (x)=>{
-            studentData.ReadStudenData(x.id)
+            studentData.ReadStudenData(x.studentID)
         
         }
     })
