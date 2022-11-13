@@ -2,6 +2,7 @@
     const fs = require("fs")
     const yargs = require("yargs")
     const studentData =require("./data")
+    let a =3 
 //  add command constructor ============================================================>
     yargs.command({
         command :"Add",
