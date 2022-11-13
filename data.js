@@ -1,6 +1,6 @@
 //  variables declaration ==========================================================>
 const fs = require("fs")
-
+let a =3 
 // add student data functions================================>
 const addStudenData =(id, name, degrees, comment)=>{
     const studentData = loadData()
